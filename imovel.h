@@ -3,6 +3,13 @@
 
 #include <string>
 
+enum tipoImovel {
+
+    Casa = 1,
+    Apartamento,
+    Terreno
+};
+
 class Imovel{
 
     private:
@@ -11,9 +18,7 @@ class Imovel{
 
         int ownerId;
 
-        //tipo enum(Casa, Apartamento, Terreno) ver isso dps.
-
-        enum tipo {Casa, Apartamento, Terreno};
+        tipoImovel tipo;
 
         double lat;
 
@@ -27,9 +32,9 @@ class Imovel{
 
         Imovel();
 
-        Imovel(int);
+        Imovel(int firstId, int firstOwnerId, tipoImovel firstTipo, double firstPreço, double firstLat, double firstLng, std::string firstEnderço);
 
-        ~Imovel();
+        void exibirInfo();
 
 };
 

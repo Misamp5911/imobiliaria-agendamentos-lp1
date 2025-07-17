@@ -21,17 +21,11 @@ class Corretor {
 
     public:
 
-        //int getId();
-
-        //std::string getName();
-
-        //std::string getPhone();
-
         Corretor ();
 
         Corretor (int newId, std::string name, std::string phone, bool aval, double lat, double ltd);
 
-        ~Corretor ();
+        void exibirInfo();
 
 };
 

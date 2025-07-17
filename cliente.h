@@ -19,7 +19,7 @@ class Cliente{
 
         Cliente(int firstId, std::string name, std::string phone );
 
-        ~Cliente();
+        void exibirInfo();
 
 };
 
