@@ -1,11 +1,13 @@
 #include "imovel.h"
 #include <iostream>
 
+int Imovel::nextIdImovel = 1;
+
 Imovel::Imovel (){}
 
-Imovel::Imovel (int firstId, int firstOwnerId, tipoImovel firstTipo, double firstPreço, double firstLat, double firstLng, std::string firstEnderço){
+Imovel::Imovel (int firstOwnerId, tipoImovel firstTipo, double firstPreço, double firstLat, double firstLng, std::string firstEnderço){
 
-    id = firstId;
+    id = nextIdImovel++; 
 
     ownerId = firstOwnerId;
 

@@ -14,6 +14,8 @@ class Imovel{
 
     private:
 
+        static int nextIdImovel;
+
         int id;
 
         int ownerId;
@@ -32,7 +34,7 @@ class Imovel{
 
         Imovel();
 
-        Imovel(int firstId, int firstOwnerId, tipoImovel firstTipo, double firstPreço, double firstLat, double firstLng, std::string firstEnderço);
+        Imovel(int firstOwnerId, tipoImovel firstTipo, double firstPreço, double firstLat, double firstLng, std::string firstEnderço);
 
         void exibirInfo();
 

@@ -7,6 +7,8 @@ class Corretor {
 
     private:
 
+        static int nextIdCorretor;
+
         int id;
 
         std::string nome;
@@ -23,7 +25,7 @@ class Corretor {
 
         Corretor ();
 
-        Corretor (int newId, std::string name, std::string phone, bool aval, double lat, double ltd);
+        Corretor (std::string name, std::string phone, bool aval, double lat, double ltd);
 
         void exibirInfo();
 

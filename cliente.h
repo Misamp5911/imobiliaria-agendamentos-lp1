@@ -7,6 +7,8 @@ class Cliente{
 
     private:
 
+        static int nextIdClient;
+
         int id;
 
         std::string nome;
@@ -17,7 +19,7 @@ class Cliente{
 
         Cliente();
 
-        Cliente(int firstId, std::string name, std::string phone );
+        Cliente(std::string name, std::string phone );
 
         void exibirInfo();
 

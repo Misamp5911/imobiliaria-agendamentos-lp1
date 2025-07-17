@@ -1,11 +1,13 @@
 #include "corretor.h"
 #include <iostream>
 
+int Corretor::nextIdCorretor = 1;
+
 Corretor::Corretor(){}
 
-Corretor::Corretor (int newId, std::string name, std::string phone, bool aval, double lat, double ltd){
+Corretor::Corretor (std::string name, std::string phone, bool aval, double lat, double ltd){
 
-    this->id = newId;
+    this->id = nextIdCorretor++;
 
     nome = name;
 

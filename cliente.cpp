@@ -1,11 +1,13 @@
 #include "cliente.h"
 #include <iostream>
 
+int Cliente::nextIdClient = 1;
+
 Cliente::Cliente (){}
 
-Cliente::Cliente (int firstId, std::string name, std::string phone){
+Cliente::Cliente (std::string name, std::string phone){
 
-    this -> id = firstId;
+    this -> id = nextIdClient++;
 
     nome = name;
 

@@ -8,11 +8,11 @@
 #include "imovel.h"
 
 
-std::vector <Cliente> entradaCliente (int number);
+std::vector <Cliente> entradaCliente ();
 
-std::vector <Corretor> entradaCorretor (int number);
+std::vector <Corretor> entradaCorretor ();
 
-std::vector <Imovel> entradaImovel (int number);
+std::vector <Imovel> entradaImovel ();
 
 
 #endif

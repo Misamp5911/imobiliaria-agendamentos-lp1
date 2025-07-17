@@ -7,11 +7,7 @@
 
 int main (){
 
-    int number;
-
-    std::cin >> number;
-
-    std::vector <Corretor> CorretorList = entradaCorretor(number);
+    std::vector <Corretor> CorretorList = entradaCorretor();
 
     for (int i = 0; i < CorretorList.size(); i++){
 
@@ -19,9 +15,7 @@ int main (){
 
     }
 
-    std::cin >> number;
-
-    std::vector <Cliente> ClientsList = entradaCliente(number);
+    std::vector <Cliente> ClientsList = entradaCliente();
 
     for (int i = 0; i < ClientsList.size(); i++){
 
@@ -29,9 +23,7 @@ int main (){
 
     }
 
-    std::cin >> number;
-
-    std::vector <Imovel> ImovelList = entradaImovel(number);
+    std::vector <Imovel> ImovelList = entradaImovel();
 
     for (int i = 0; i < ImovelList.size(); i++){
 

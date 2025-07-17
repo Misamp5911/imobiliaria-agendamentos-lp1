@@ -8,13 +8,15 @@
 
 //Função para armazenar objetos instânciados (a partir da entrada padrão) em um vetor de clientes.
 
-std::vector <Cliente> entradaCliente (int number){
+std::vector <Cliente> entradaCliente (){
+
+    int number;
+
+    std::cin >> number;
 
     std::vector <Cliente> ListadeClientes;
 
     for (int i = 0; i < number; i++){
-
-        int id = i + 1;
 
         std::string telefone = "";
 
@@ -22,9 +24,10 @@ std::vector <Cliente> entradaCliente (int number){
 
         std::cin >> telefone >> nome;
 
-        Cliente novocliente = Cliente (id, nome ,telefone);
+        Cliente novocliente = Cliente (nome ,telefone);
 
         ListadeClientes.push_back(novocliente);
+
     }
 
     return ListadeClientes;
@@ -33,13 +36,15 @@ std::vector <Cliente> entradaCliente (int number){
 
 //Função para armazenar objetos instânciados (a partir da entrada padrão) em um vetor de corretores.
 
-std::vector <Corretor> entradaCorretor (int number){
+std::vector <Corretor> entradaCorretor (){
+
+    int number;
+
+    std::cin >> number;
 
     std::vector <Corretor> ListadeCorretores;
 
     for (int i = 0; i < number; i++){
-
-        int id = i + 1;
 
         std::string nome = "";
 
@@ -53,7 +58,7 @@ std::vector <Corretor> entradaCorretor (int number){
 
         std::cin >> telefone >> avaliador >> latitude >> longitude >> nome;
 
-        Corretor novoCorretor = Corretor (id , nome, telefone, avaliador, latitude, longitude);
+        Corretor novoCorretor = Corretor ( nome, telefone, avaliador, latitude, longitude);
 
         ListadeCorretores.push_back(novoCorretor);
 
@@ -65,13 +70,15 @@ std::vector <Corretor> entradaCorretor (int number){
 
 //Função para armazenar objetos instânciados (a partir da entrada padrão) em um vetor de imóveis.
 
-std::vector <Imovel> entradaImovel (int number){
+std::vector <Imovel> entradaImovel (){
+
+    int number;
+
+    std::cin >> number;
 
     std::vector <Imovel> ListadeImoveis;
 
     for (int i = 0; i < number; i++){
-
-        int id = i + 1;
 
         std::string entradaTipo = "";
 
@@ -97,7 +104,7 @@ std::vector <Imovel> entradaImovel (int number){
 
         else if (entradaTipo == "Terreno") tipo = Terreno ;
 
-        Imovel novoImovel = Imovel (id, idDono, tipo, preço, latitude, longitude, endereço);
+        Imovel novoImovel = Imovel (idDono, tipo, preço, latitude, longitude, endereço);
 
         ListadeImoveis.push_back(novoImovel);
 

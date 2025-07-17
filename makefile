@@ -1,5 +1,5 @@
-Agendamentos: main.o cliente.o corretor.o imovel.o entradaclasses.o
-	g++ main.o cliente.o corretor.o imovel.o entradaclasses.o -w -o Agendamentos
+imobiliaria: main.o cliente.o corretor.o imovel.o entradaclasses.o
+	g++ main.o cliente.o corretor.o imovel.o entradaclasses.o -w -o imobiliaria
 
 Main: main.cpp
 	g++ main.cpp -w -c 
@@ -20,7 +20,7 @@ Remove:
 	rm -f *.o
 
 Erase:
-	rm Agendamentos
+	rm imobiliaria
 
 
 
