@@ -4,32 +4,40 @@
 #include "cliente.h"
 #include "corretor.h"
 #include "imovel.h"
+#include "timenspace.h"
 
 int main (){
 
     std::vector <Corretor> CorretorList = entradaCorretor();
 
-    for (int i = 0; i < CorretorList.size(); i++){
-
-        CorretorList[i].exibirInfo();
-
-    }
+    std::vector <Corretor> CorretorAvalList;
 
     std::vector <Cliente> ClientsList = entradaCliente();
 
-    for (int i = 0; i < ClientsList.size(); i++){
+    std::vector <Imovel> ImovelList = entradaImovel();
 
-        ClientsList[i].exibirInfo();
+    for (int i = 0; i < CorretorList.size(); i++){
+
+        if(CorretorList[i].getAval() == 1) CorretorAvalList.push_back(CorretorList[i]);
 
     }
-
-    std::vector <Imovel> ImovelList = entradaImovel();
 
     for (int i = 0; i < ImovelList.size(); i++){
 
-        ImovelList[i].exibirInfo();
+        Agendamentos novoAgendamento = Agendamentos ( 540, ImovelList[i]);
+
+        CorretorAvalList[i % CorretorAvalList.size()].adicionarAvaliacao(novoAgendamento);
 
     }
+    
+    for (int i = 0; i < CorretorAvalList.size(); i++){
+
+        std::cout << "Corretor "<<CorretorAvalList[i].getId() << std::endl;
+
+        CorretorAvalList[i].mostrarAvaliacoes();
+
+    }
+    //std::cout << "Distância do corretor " << CorretorList[0].getId() << " para imóvel " << ImovelList[0].getId ()<< " :" << haversine(CorretorList[0].getLat(), CorretorList[0].getLng(), ImovelList[0].getLat(),ImovelList[0].getLng()) << std::endl;
 
     return 0;
 }

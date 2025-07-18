@@ -34,3 +34,34 @@ void Corretor::exibirInfo(){
     std::cout << "Latitude: " << this->latitude << std::endl << "Longitude: " << this->longitude << std::endl << std::endl;
 
 }
+
+bool Corretor::getAval(){
+    return this-> avaliador;
+}
+
+int Corretor::getId(){
+    return this->id;
+}
+
+double Corretor::getLat(){
+    return this->latitude;
+}
+
+double Corretor::getLng(){
+    return this->longitude;
+}
+
+void Corretor::adicionarAvaliacao(Agendamentos novoAval){
+
+    this->avaliacoes.push_back(novoAval);
+}
+
+void Corretor::mostrarAvaliacoes(){
+
+    if(avaliacoes.size() == 0) return ;
+
+    for(int i = 0; i < avaliacoes.size(); i++){
+
+        avaliacoes[i].mostrarAgendamento();
+    }
+}

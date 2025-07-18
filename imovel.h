@@ -38,6 +38,12 @@ class Imovel{
 
         void exibirInfo();
 
+        int getId() const;
+
+        double getLat();
+
+        double getLng();
+
 };
 
 #endif

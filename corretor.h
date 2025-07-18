@@ -2,6 +2,8 @@
 #define CORRETOR_H
 
 #include <string>
+#include <vector>
+#include "agendamentos.h"
 
 class Corretor {
 
@@ -21,6 +23,8 @@ class Corretor {
 
         double longitude;
 
+        std::vector <Agendamentos> avaliacoes;
+
     public:
 
         Corretor ();
@@ -29,6 +33,17 @@ class Corretor {
 
         void exibirInfo();
 
+        bool getAval();
+
+        int getId();
+
+        double getLat();
+
+        double getLng();
+
+        void adicionarAvaliacao(Agendamentos novaAval);
+
+        void mostrarAvaliacoes();
 };
 
 #endif

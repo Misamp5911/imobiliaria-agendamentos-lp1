@@ -48,3 +48,15 @@ void Imovel::exibirInfo(){
     
     std:: cout << "Endereco: " << endereço << std::endl << std::endl;
 }
+
+int Imovel::getId() const{
+    return this->id;
+}
+
+double Imovel::getLat(){
+    return this->lat;
+}
+
+double Imovel::getLng(){
+    return this->lng;
+}
