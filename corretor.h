@@ -43,7 +43,13 @@ class Corretor {
 
         void adicionarAvaliacao(Agendamentos novaAval);
 
+        void trocarOrdemAvaliação(int primeiro, int segundo);
+
         void mostrarAvaliacoes();
+
+        void gerarAgenda();
+
+
 };
 
 #endif

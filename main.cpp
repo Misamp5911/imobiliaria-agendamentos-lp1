@@ -4,7 +4,7 @@
 #include "cliente.h"
 #include "corretor.h"
 #include "imovel.h"
-#include "timenspace.h"
+#include "haversine.h"
 
 int main (){
 
@@ -22,14 +22,26 @@ int main (){
 
     }
 
+    //"For" para designar os imóveis para cada corretor correspondente.
+
     for (int i = 0; i < ImovelList.size(); i++){
 
-        Agendamentos novoAgendamento = Agendamentos ( 540, ImovelList[i]);
+        Agendamentos novoAgendamento = Agendamentos (540, ImovelList[i]);
 
         CorretorAvalList[i % CorretorAvalList.size()].adicionarAvaliacao(novoAgendamento);
 
     }
     
+    //Gerar agenda.
+
+    for(int i = 0; i < CorretorAvalList.size(); i++){
+
+        CorretorAvalList[i].gerarAgenda();
+
+    }
+
+    //For para mostrar os agendamentos de cada corretor
+
     for (int i = 0; i < CorretorAvalList.size(); i++){
 
         std::cout << "Corretor "<<CorretorAvalList[i].getId() << std::endl;
@@ -37,7 +49,6 @@ int main (){
         CorretorAvalList[i].mostrarAvaliacoes();
 
     }
-    //std::cout << "Distância do corretor " << CorretorList[0].getId() << " para imóvel " << ImovelList[0].getId ()<< " :" << haversine(CorretorList[0].getLat(), CorretorList[0].getLng(), ImovelList[0].getLat(),ImovelList[0].getLng()) << std::endl;
 
     return 0;
 }

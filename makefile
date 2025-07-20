@@ -1,5 +1,5 @@
-imobiliaria: main.o cliente.o corretor.o imovel.o entradaclasses.o agendamentos.o timenspace.o
-	g++ main.o cliente.o corretor.o imovel.o entradaclasses.o agendamentos.o timenspace.o -w -o imobiliaria
+imobiliaria: main.o cliente.o corretor.o imovel.o entradaclasses.o agendamentos.o haversine.o
+	g++ main.o cliente.o corretor.o imovel.o entradaclasses.o agendamentos.o haversine.o -w -o imobiliaria
 
 Main: main.cpp
 	g++ main.cpp -w -c 
@@ -16,8 +16,8 @@ Imovel: imovel.cpp
 EntradaClasses: entradaclasses.cpp
 	g++ entradaclasses.cpp -w -c
 
-DistanciaeTempo: timenspace.cpp
-	g++ timenspace -w -c
+Haversine: haversine.cpp
+	g++ haversine.cpp -w -c
 
 Agendamentos: agendamentos.cpp
 	g++ agendamentos.cpp -w -c

@@ -19,6 +19,12 @@ class Agendamentos{
 
     void mostrarAgendamento();
 
+    const Imovel* getImovelAgendado();
+
+    int getHorario();
+
+    void setHorario(int newHorario);
+
 };
 
 

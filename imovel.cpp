@@ -53,10 +53,10 @@ int Imovel::getId() const{
     return this->id;
 }
 
-double Imovel::getLat(){
+double Imovel::getLat() const{
     return this->lat;
 }
 
-double Imovel::getLng(){
+double Imovel::getLng() const{
     return this->lng;
 }

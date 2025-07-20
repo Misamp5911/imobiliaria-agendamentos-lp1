@@ -40,9 +40,9 @@ class Imovel{
 
         int getId() const;
 
-        double getLat();
+        double getLat() const;
 
-        double getLng();
+        double getLng() const;
 
 };
 
